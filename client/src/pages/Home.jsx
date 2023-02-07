@@ -75,7 +75,7 @@ export const Home = () => {
             </div>
             )
           : (
-            <div className='grid gap-3'>
+            <div className={`grid gap-5 ${!searchText && 'lg:grid-cols-3 grid-cols-1'}`}>
               {searchText
                 ? (
                   <RenderCards data={searchedResults} title='No search results found' />
